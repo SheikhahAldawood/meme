@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="meme1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pw4-xa-DP8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVx-24-gPR">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Pick" id="d6G-bE-XMW">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="2Oa-ls-kfp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera" id="hfX-TC-NN8">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="QQr-Sa-jAT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" allowsEditingTextAttributes="YES" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN6-Wl-zBn">
+                                <rect key="frame" x="16" y="128" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyV-ye-MgU">
+                                <rect key="frame" x="16" y="626" width="382" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYM-US-Rk9">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="mTr-ha-FGZ">
+                                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="action" id="uVZ-7q-ab3">
+                                            <connections>
+                                                <action selector="shareButtonAction:" destination="BYZ-38-t0r" id="FjP-OP-R7O"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HVx-24-gPR" secondAttribute="bottom" id="7GN-Y6-BDg"/>
+                            <constraint firstItem="HVx-24-gPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Kp-hS-w1l"/>
+                            <constraint firstItem="DN6-Wl-zBn" firstAttribute="top" secondItem="KYM-US-Rk9" secondAttribute="bottom" constant="64" id="9RJ-Oy-L6c"/>
+                            <constraint firstItem="HVx-24-gPR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B3s-yu-CNZ"/>
+                            <constraint firstItem="KYM-US-Rk9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ccf-H8-rvj"/>
+                            <constraint firstItem="KYM-US-Rk9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="F73-lG-Ci9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HVx-24-gPR" secondAttribute="bottom" id="FOs-HA-f3Y"/>
+                            <constraint firstItem="HVx-24-gPR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FRR-9V-uwY"/>
+                            <constraint firstItem="KYM-US-Rk9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HtC-gW-We1"/>
+                            <constraint firstItem="Pw4-xa-DP8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mgn-7c-LLq"/>
+                            <constraint firstItem="KYM-US-Rk9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NUy-ex-rHN"/>
+                            <constraint firstItem="Pw4-xa-DP8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OBa-Nj-wyu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HVx-24-gPR" secondAttribute="bottom" id="QXH-eq-3k9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DN6-Wl-zBn" secondAttribute="trailing" constant="16" id="RTH-e5-uBQ"/>
+                            <constraint firstItem="DN6-Wl-zBn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SK4-sT-YxH"/>
+                            <constraint firstItem="HVx-24-gPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vwo-Ng-6Ve"/>
+                            <constraint firstItem="Pw4-xa-DP8" firstAttribute="top" secondItem="KYM-US-Rk9" secondAttribute="bottom" id="W8V-Xx-OL8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HVx-24-gPR" secondAttribute="bottom" id="YwZ-NV-pQR"/>
+                            <constraint firstItem="KYM-US-Rk9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="clh-i2-mfN"/>
+                            <constraint firstItem="Pw4-xa-DP8" firstAttribute="bottom" secondItem="HVx-24-gPR" secondAttribute="top" id="ee4-xu-Re6"/>
+                            <constraint firstItem="SyV-ye-MgU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="esA-t2-txy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SyV-ye-MgU" secondAttribute="trailing" constant="16" id="hYu-s6-qA5"/>
+                            <constraint firstItem="HVx-24-gPR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jNT-Pa-n55"/>
+                            <constraint firstItem="HVx-24-gPR" firstAttribute="top" secondItem="SyV-ye-MgU" secondAttribute="bottom" constant="45" id="k6n-74-LXI"/>
+                            <constraint firstItem="HVx-24-gPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="klu-oJ-Jlo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pw4-xa-DP8" secondAttribute="trailing" id="qBA-Ul-kpp"/>
+                            <constraint firstItem="KYM-US-Rk9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qaP-Ln-DSU"/>
+                            <constraint firstItem="KYM-US-Rk9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rmC-Da-RJ9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HVx-24-gPR" secondAttribute="bottom" id="scd-ro-agq"/>
+                            <constraint firstItem="Pw4-xa-DP8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="txF-59-wrL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="hfX-TC-NN8" id="vCK-4N-ACU"/>
+                        <outlet property="imagePickerView" destination="Pw4-xa-DP8" id="EzR-nu-fAK"/>
+                        <outlet property="navBar" destination="KYM-US-Rk9" id="K6U-p3-hkZ"/>
+                        <outlet property="shareButton" destination="uVZ-7q-ab3" id="AyA-yS-qgL"/>
+                        <outlet property="textField1" destination="DN6-Wl-zBn" id="Tei-3W-tvu"/>
+                        <outlet property="textField2" destination="SyV-ye-MgU" id="4HA-Al-9Jd"/>
+                        <outlet property="toolBar" destination="HVx-24-gPR" id="tGp-1U-o1Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+</document>
